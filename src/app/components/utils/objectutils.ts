@@ -169,8 +169,8 @@ export class ObjectUtils {
     }
 
     public static removeAccents(str) {
-        if (str && str.search(/[\xC0-\xFF]/g) > -1) {
-            str = str
+        if (str && str.toString().search(/[\xC0-\xFF]/g) > -1) {
+            str = str.toString()
                     .replace(/[\xC0-\xC5]/g, "A")
                     .replace(/[\xC6]/g, "AE")
                     .replace(/[\xC7]/g, "C")
